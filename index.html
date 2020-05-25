@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>abhitech </title>
+
+  <style>
+    .btn {
+      padding: 0%;
+      margin: 4px;
+      border-radius: 5%;
+      font-size: medium;
+
+    }
+
+    #more {
+      display: none;
+    }
+
+    .footer {
+      background: white;
+      color: black;
+      height: 50px;
+      position: relative;
+
+    }
+
+    .footer .footer-bottom {
+      background: rgb(204, 202, 202);
+      color: black;
+      height: 50px;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      padding: 10px;
+
+
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .box {
+      width: 30%;
+      float: left;
+      margin: 50px 20px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .box h4 {
+      margin-bottom: 10px;
+
+    }
+
+    .box p {
+      font-size: 15px;
+      line-height: 28px;
+      height: 90px;
+      overflow: hidden;
+
+    }
+
+    .box a {
+      display: inline-block;
+      color: white;
+      background-color: #2196f3;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .box a:hover {
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .box.showContent p {
+      height: auto;
+
+    }
+
+    .box.showContent a.readmore-btn {
+      background-color: red;
+    }
+  </style>
+
+  </style>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <a class="navbar-brand" href="#">NewTECH </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/abhitech/Home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/abhitech/Blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/abhitech/Contact.html">Contact</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <div class="mx-2">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">Login</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#SignUpModal">SignUp</button>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="LoginModalLabel">Login</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="SignUpModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SignUpModalLabel">SignUp</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Name</label>
+                <input type="Name" class="form-control" id="exampleInputName">
+              </div>
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Confirm Password</label>
+              <input type="Confirm password" class="form-control" id="exampleInputConfirmPassword1">
+            </div>
+
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://source.unsplash.com/1600x900/?Technology" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Learning New Technology</h1>
+          <p>Heaven for Beginers to learn Artificial Intelligence and use New Technology</p>
+          <button class="btn btn-danger">Technology</button>
+          <button class="btn btn-primary">Web Development</button>
+          <button class="btn btn-success">Tech News</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1600x900/?Software" class="d-block w-100" alt="...">
+        1
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Learning New Technology</h1>
+          <p>Heaven for Beginers to learn Artificial Intelligence and use New Technology</p>
+          <button class="btn btn-danger">Technology</button>
+          <button class="btn btn-primary">Web Development</button>
+          <button class="btn btn-success">Tech News</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://source.unsplash.com/1600x900/?computer" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Learning New Technology</h1>
+          <p>Heaven for Beginers to learn Artificial Intelligence and use New Technology</p>
+          <button class="btn btn-danger">Technology</button>
+          <button class="btn btn-primary">Web Development</button>
+          <button class="btn btn-success">Tech News</button>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 font-weight-normal">AboutUs</h1>
+      <p class="lead font-weight-normal">NewTech is lead by Abhishek Chaturvedi. It provide a new information about
+        technology and make a carrier bright those who have studied from this NewTech site .The NewTech is lead by
+        abhishek who was pursuing Bachelor of Computer Application From IMS noida and it is enthusiast to Provide
+        information about new technology.</p>
+      <a class="btn btn-outline-primary" href="#">Blogspint</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+  <div class="box">
+    <img src="space.jpeg" alt="">
+    <h4>SpaceX crew Dragon Demo 2</h4>
+    <p>It all started with the dream of growing a rose on Mars.
+      That vision, Elon Musk's vision, morphed into a shake-up of the old space industry, and a fleet of new private
+      rockets. Now, those rockets will launch NASA astronauts from Florida to the International Space Station -- the
+      first time a for-profit company will carry astronauts into the cosmos.
+      It's a milestone in the effort to commercialise space. But for Musk's company, SpaceX, it's also the latest
+      milestone in a wild ride that began with epic failures and the threat of bankruptcy.
+      If the company's eccentric founder and CEO has his way, this is just the beginning: He's planning to build a city
+      on the red planet, and live there.
+      “What I really want to achieve here is to make Mars seem possible, make it seem as though it's something that we
+      can do in our lifetimes and that you can go,” Musk told a cheering congress of space professionals in Mexico in
+      2016.
+      Musk “is a revolutionary change” in the space world, says Harvard University astrophysicist Jonathan McDowell,
+      whose Jonathan's Space Report has tracked launches and failures for decades.
+      Ex-astronaut and former Commercial Spaceflight Federation chief Michael Lopez-Alegria says, “I think history will
+      look back at him like a da Vinci figure.”
+      Musk has become best known for Tesla, his audacious effort to build an electric vehicle company. But SpaceX
+      predates it.
+      At 30, Musk was already wildly rich from selling his Internet financial company PayPal and its predecessor Zip2.
+      He arranged a series of lunches in Silicon Valley in 2001 with G Scott Hubbard, who had been NASA's Mars czar and
+      was then running the agency's Ames Research Center.
+      Musk wanted to somehow grow a rose on the red planet, show it to the world and inspire school children, recalls
+      Hubbard.
+      “His real focus was having life on Mars,” says Hubbard, a Stanford University professor who now chairs SpaceX's
+      crew safety advisory panel.
+      The big problem, Hubbard told him, was building a rocket affordable enough to go to Mars. Less than a year later
+      Space Exploration Technologies, called SpaceX, was born.
+      There are many space companies and like all of them, SpaceX is designed for profit. But what's different is that
+      behind that profit motive is a goal, which is simply to “Get Elon to Mars,” McDowell says. “By having that
+      longer-term vision, that's pushed them to be more ambitious and really changed things.”
+      Everyone at SpaceX, from senior vice presidents to the barista who offers its in-house cappuccinos and FroYo,
+      “will tell you they are working to make humans multi-planetary,” says former SpaceX Director of Space Operations
+      Garrett Reisman, an ex-astronaut now at the University of Southern California.
+      Musk founded the company just before NASA ramped up the notion of commercial space.
+      Traditionally, private firms built things or provided services for NASA, which remained the boss and owned the
+      equipment. The idea of bigger roles for private companies has been around for more than 50 years, but the market
+      and technology weren't yet right.
+      NASA's two deadly space shuttle accidents -- Challenger in 1986 and Columbia in 2003 -- were pivotal, says W Henry
+      Lambright, a professor of public policy at Syracuse University.
+      When Columbia disintegrated, NASA had to contemplate a post-space shuttle world. That's where private companies
+      came in, Lambright says.
+      After Columbia, the agency focused on returning astronauts to the Moon, but still had to get cargo and astronauts
+      to the space station, says Sean O'Keefe, who was NASA's administrator at the time. A 2005 pilot project helped
+      private companies develop ships to bring cargo to the station.
+      SpaceX got some of that initial funding. The company's first three launches failed. The company could have just as
+      easily failed too, but NASA stuck by SpaceX and it started to pay off, Lambright says.
+      “You can't explain SpaceX without really understanding how NASA really kind of nurtured it in the early days,”
+      Lambright says. “In a way, SpaceX is kind of a child of NASA.”
+      Since 2010, NASA has spent $6 billion (roughly Rs. 45,586 crores) to help private companies get people into orbit,
+      with SpaceX and Boeing the biggest recipients, says Phil McAlister, NASA's commercial spaceflight director.
+      NASA plans to spend another $2.5 billion (roughly Rs. 18,984 crores) to purchase 48 astronaut seats to the space
+      station in 12 different flights, he says. At a little more than $50 million (roughly Rs. 379 crores) a ride, it's
+      much cheaper than what NASA has paid Russia for flights to the station.
+      Starting from scratch has given SpaceX an advantage over older firms and NASA that are stuck using legacy
+      technology and infrastructure, O'Keefe says.
+      And SpaceX tries to build everything itself, giving the firm more control, Reisman says. The company saves money
+      by reusing rockets, and it has customers aside from NASA.
+      The California company now has 6,000 employees. Its workers are young, highly caffeinated and put in 60- to
+      90-hour weeks, Hubbard and Reisman say. They also embrace risk more than their NASA counterparts.
+      Decisions that can take a year at NASA can be made in one or two meetings at SpaceX, says Reisman, who still
+      advises the firm.
+      In 2010, a Falcon 9 rocket on the launch pad had a cracked nozzle extension on an engine. Normally that would mean
+      rolling the rocket off the pad and a fix that would delay launch more than a month.
+      But with NASA's permission, SpaceX engineer Florence Li was hoisted into the rocket nozzle with a crane and
+      harness. Then, using what were essentially garden shears, she “cut the thing, we launched the next day and it
+      worked,” Reisman says.
+      Musk is SpaceX's public and unconventional face -- smoking marijuana on a popular podcast, feuding with local
+      officials about opening his Tesla plant during the pandemic, naming his newborn child “X Æ A-12.” But insiders say
+      aerospace industry veteran Gwynne Shotwell, the president and chief operating officer, is also key to the
+      company's success.
+      “The SpaceX way is actually a combination of Musk's imagination and creativity and drive and Shotwell's sound
+      management and responsible engineering,” McDowell says.
+      But it all comes back to Musk's dream. Former NASA chief O'Keefe says Musk has his eccentricities, huge doses of
+      self-confidence and persistence, and that last part is key: “You have the capacity to get through a setback and
+      look ... toward where you're trying to go.”
+      For Musk, it's Mars.
+      COMMENTS
+      x
+      Comments
+
+      Powered by Blogger
+      Theme images by Michael.</p>
+    <a href="javascript:void();" class="readmore-btn">Read More</a>
+  </div>
+  <div class="box">
+    <img src="https://source.unsplash.com/400x200/?nature,water" alt="">
+    <h4>abhishek chaturevdi</h4>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt doloremque sequi minus voluptas itaque commodi
+      est, inventore perspiciatis vel qui totam saepe nisi magnam excepturi natus eius laboriosam? Incidunt
+      aliquid quibusdam tempora obcaecati nemo officia laudantium velit, doloremque blanditiis quas facilis eum
+      praesentium Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, officiis!lor. Lorem ipsum, dolor sit
+      amet consectetur adipisicing elit. Obcaecati, deleniti.</p>
+    <a href="javascript:void();" class="readmore-btn">Read More</a>
+  </div>
+  <div class="box">
+    <img src="https://source.unsplash.com/400x200/?nature,water" alt="">
+    <h4>abhishek chaturevdi</h4>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt doloremque sequi minus voluptas itaque commodi
+      est, inventore perspiciatis vel qui totam saepe nisi magnam excepturi natus eius laboriosam? Incidunt
+      aliquid quibusdam tempora obcaecati nemo officia laudantium velit, doloremque blanditiis quas facilis eum
+      praesentium Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, officiis!lor. Lorem ipsum, dolor sit
+      amet consectetur adipisicing elit. Obcaecati, deleniti.</p>
+    <a href="javascript:void();" class="readmore-btn">Read More</a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script>
+
+    $(".readmore-btn").on('click', function () {
+      $(this).parent().toggleClass("showContent");
+    })
+  </script>
+
+
+  <div class="wp-block-media-text__content">
+    <div style="height:32px;" aria-hidden="true" class="wp-block-spacer"></div>
+    <h2>TechHub</h2>
+    <p>There is never been a better time to learn &amp; good Technology never stops learning.We’re heading towards
+      different aspects of Technology world.</p>
+    <ul>
+      <li>Programming and best info.</li>
+      <li>Research &amp; Analysis</li>
+      <li>Professional</li>
+      <div style="height:32px;" aria-hidden="true" class="wp-block-spacer"></div>
+  </div>
+
+
+  <a href='https://bachelorthesiswritingservice.com/'>https://bachelorthesiswritingservice.com/</a>
+  <script type='text/javascript'
+    src='https://www.freevisitorcounters.com/auth.php?id=24013c32a9451112b3bef9147b97eb2062cefd0c'></script>
+  <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/685916/t/5"></script>
+
+
+ 
+  <div class="footer">
+    <div class="footer-content">
+      <div class="footer-section about"></div>
+      <div class="footer-section about"></div>
+      <div class="footer-section about"></div>
+    </div>
+    <div class="footer-bottom">
+      &copy; TechHub.com | Designed by abhishek developer
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
